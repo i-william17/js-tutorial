@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <h1>My First JavaScript</h1>
+    <p id="demo">This is a paragraph.</p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello, JavaScript!";
+    </script>
+
+    <!--Color Change Button-->
+    <button onclick="changeColor()">CHANGE ME</button>
+
+    <!--Counter-->
+    <h2>Counter</h2>
+    <div id="counter">0</div>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="reset()">Reset</button>
+
+    <!-- To do List -->
+    <h1>To-do List</h1>
+    <div class="container">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button id="addTaskBtn">Add task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <!-- Simple Calculater -->
+     <h1>Simple Calculater</h1>
+     <input type="text" id="display" disabled/>
+
+     <div class="buttons">
+      <button onclick="clearDisplay()">Clear</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="calculateResult()" class="equals">=</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+     </div>
+
+     <!-- Password Generater -->
+      <div class="password">
+        <h1>PASSWORD GENERATER</h1>
+
+        <div class="password-box">
+          <input type="text" id="password" readonly>
+          <button id="copyBtn">Copy</button>
+        </div>
+
+        <div class="settings">
+          <label for="length">Password Length:</label>
+          <input type="number" id="length" min="4" max="32" value="12">
+
+          <label for="uppercase">Include Uppercase Letters</label>
+          <input type="checkbox" id="uppercase" checked>
+
+          <label for="lowercase">Include Lowercase Letters</label>
+          <input type="checkbox" id="lowercase" checked>
+          
+          <label for="numbers">Include Numbers</label>
+          <input type="checkbox" id="numbers" checked>
+
+          <label for="symbols">Include Symbols</label>
+          <input type="checkbox" id="symbols" checked>
+
+        </div>
+        <button id="generateBtn">Generate Password</button>
+      </div>
+
+      <!-- Countdown  Timer -->
+       <h1>Countdown Timer</h1>
+
+       <div class="timer">
+        <input type="number" id="hours" placeholder="Hours" min="0" max="24">
+        <span>:</span>
+        <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+        <span>:</span>
+        <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+       </div>
+
+       <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+       </div>
+
+       <div id="countdown"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
